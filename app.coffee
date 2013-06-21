@@ -58,10 +58,15 @@ app.get '/foursquare/callback', (request, response) ->
       response.redirect '/'
 
 app.post '/foursquare/checkin', (request, response) ->
-  gpio.open 16, "output", (err) ->           #// Open pin 16 for output
+
+  gpio.open config.pin, "output", (err) ->
     unless err
-      gpio.write 16, 1, () ->                #// Set pin 16 high (1)
-        gpio.close 16                        #// Close pin 16
+      gpio.write config.pin, 1, () ->
+        setTimeout () ->
+          gpio.write config.pin, 0, () ->
+            gpio.close config.pin
+        , 5000
+  console.log request
   response.send 204
 
 
