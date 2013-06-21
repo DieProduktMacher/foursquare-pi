@@ -5,7 +5,7 @@ exec = require("child_process").exec
 
 https = require "https"
 express = require "express"
-OAuth2 = require("OAuth").OAuth2
+OAuth2 = require("oauth").OAuth2
 
 config = JSON.parse fs.readFileSync('config.json')
 
