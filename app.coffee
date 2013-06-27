@@ -58,15 +58,23 @@ app.get '/foursquare/callback', (request, response) ->
       response.redirect '/'
 
 app.post '/foursquare/checkin', (request, response) ->
+  checkin = request.param 'checkin'
+  if checkin
+    checkin = JSON.parse checkin
+    console.log checkin
+    name = checkin.user.firstName
+    gender = if checkin.user.gender is "male" then "f" else "m"
+    exec "espeak -ven-us+#{gender}4 'Welcome to the party, #{name}.'"
+    gpio.open config.pin, "output", (err) ->
+      unless err
+        gpio.write config.pin, 1, () ->
+          setTimeout () ->
+            gpio.write config.pin, 0, () ->
+              gpio.close config.pin
+          , 5000
 
-  gpio.open config.pin, "output", (err) ->
-    unless err
-      gpio.write config.pin, 1, () ->
-        setTimeout () ->
-          gpio.write config.pin, 0, () ->
-            gpio.close config.pin
-        , 5000
-  console.log request
+  else
+    console.log request
   response.send 204
 
 
