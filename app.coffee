@@ -1,3 +1,8 @@
+##
+# Author: Thomas Limp thomas.limp@produktmacher.com
+# Copyright: (c) 2013 Thomas Limp (mailto:thomas.limp@produktmacher.com), [DieProduktMacher GmbH](http://www.dieproduktmacher.com "DieProduktMacher GmbH")
+# License: MIT (see LICENSE.md)
+##
 
 gpio = require "pi-gpio"
 fs = require "fs"

@@ -1,12 +1,12 @@
 {
   "name": "foursquare-pi",
-  "version": "0.0.0",
-  "description": "Simple NodeJS experiment controlling RaspberryPIs GPIO triggered by Foursquare-PushAPI",
-  "main": "app.js",
+  "version": "0.1.0",
+  "description": "Simple NodeJS experiment controlling one of RaspberryPIs GPIO pins and producing an audio greeting triggered by Foursquares Venue-Push-API.",
+  "main": "app.coffee",
   "scripts": {},
   "repository": "",
   "author": "thomas.limp@produktmacher.com",
-  "license": "BSD",
+  "license": "MIT",
   "dependencies": {
     "pi-gpio": "*",
     "oauth": "*",
