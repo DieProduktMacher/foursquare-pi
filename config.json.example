@@ -1,0 +1,19 @@
+{
+  "pin": 16,
+  "foursquare": {
+      "client_id": "<YOUR APPS CLIENT ID>",
+      "client_secret": "<YOUR APPS CLIENT SECRET>",
+      "push_secret": "<YOUR APPS PUSH SECRET>",
+      "redirect_uri": "https://<YOUR APPS DOMAIN>/foursquare/callback",
+      "response_type": "code",
+      "grant_type": "authorization_code"
+    },
+  "ssl": {
+    "key_path": "<PATH TO YOUR SSL-PRIVATE-KEY>",
+    "cert_path": "<PATH TO YOUR SSL-CERTIFICATE-BUNDLE>"
+  },
+  "session": {
+    "key": "office-pi",
+    "secret": "<GENERATE A RANDOM STRING FOR COOKIE SIGNING>"
+  }
+}
