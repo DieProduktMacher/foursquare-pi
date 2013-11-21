@@ -4,7 +4,7 @@
   "description": "Simple NodeJS experiment controlling one of RaspberryPIs GPIO pins and producing an audio greeting triggered by Foursquares Venue-Push-API.",
   "main": "app.coffee",
   "scripts": {},
-  "repository": "",
+  "repository": "https://github.com/DieProduktMacher/foursquare-pi.git",
   "author": "thomas.limp@produktmacher.com",
   "license": "MIT",
   "dependencies": {
